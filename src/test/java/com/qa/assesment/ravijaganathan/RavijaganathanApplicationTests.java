@@ -53,4 +53,9 @@ public class RavijaganathanApplicationTests {
 				.statusCode(200);
 	}
 
+	@Test
+	public void Test_deleteServiceEndPointCheck(){
+		Assert.fail("Delete Service before Development");
+	}
+
 }
