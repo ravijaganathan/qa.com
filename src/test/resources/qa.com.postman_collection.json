@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "963d66c0-eb20-4464-bcbf-f038b59baf11",
+		"name": "qa.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"firstName\": \"Steven\",\n        \"lastName\": \"Doe\",\n        \"accountNumber\": \"1238\"\n}\n\t\n"
+				},
+				"url": {
+					"raw": "localhost:8080/account-project/rest/account/json",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account-project",
+						"rest",
+						"account",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/account-project/rest/account/json",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account-project",
+						"rest",
+						"account",
+						"json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Del Account by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/account-project/rest/account/json/1238",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account-project",
+						"rest",
+						"account",
+						"json",
+						"1238"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
