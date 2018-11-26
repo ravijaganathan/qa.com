@@ -16,6 +16,7 @@ public class Account {
     private String firstName;
     private String lastName;
     @Id
+    //TODO: Account Number is not auto Generated
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String accountNumber;
 

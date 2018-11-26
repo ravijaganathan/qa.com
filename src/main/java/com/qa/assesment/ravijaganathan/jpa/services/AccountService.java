@@ -28,4 +28,10 @@ public class AccountService {
         return accountList;
     }
 
+
+    /*Requirement 03: Delete Account by ID*/
+    public void deleteAccount(String accountNumber) {
+        accountRepository.deleteById(accountNumber);
+    }
+
 }
