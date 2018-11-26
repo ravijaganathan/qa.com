@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AccountProjectController {
 
@@ -15,7 +17,12 @@ public class AccountProjectController {
     private AccountService accountService;
 
     @RequestMapping(method= RequestMethod.POST,value="/account-project/rest/account/json")
-    public void addSecurity(@RequestBody Account account) {
+    public void addAccount(@RequestBody Account account) {
         accountService.addAccount(account);
+    }
+
+    @RequestMapping(method= RequestMethod.GET,value="/account-project/rest/account/json")
+    public List<Account> getAllAccounts() {
+        return accountService.getAllAccounts();
     }
 }

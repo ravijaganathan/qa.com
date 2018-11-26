@@ -19,6 +19,8 @@ import static io.restassured.RestAssured.given;
 @SpringBootTest
 public class RavijaganathanApplicationTests {
 
+	private int statusCode = 200;
+
 	@Test
 	public void contextLoads() {
 	}
@@ -39,13 +41,16 @@ public class RavijaganathanApplicationTests {
 
 		Response response = request.post("http://localhost:8080/account-project/rest/account/json");
 
-		int statusCode = 200;
+
 		Assert.assertEquals(statusCode, response.statusCode());
 	}
 
 	@Test
 	public void Test_retriveServiceEndPointCheck(){
-		Assert.fail("No Code implemented for retrival");
+		given()
+				.get("http://localhost:8080/account-project/rest/account/json")
+				.then()
+				.statusCode(200);
 	}
 
 }
