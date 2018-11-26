@@ -1,0 +1,15 @@
+server:
+    port: 8080
+spring:
+    batch:
+        initialize-schema: always
+    datasource:
+        driverClassName: org.h2.Driver
+        initialization-mode: always
+        password: ''
+        url: jdbc:h2:mem:steps;DB_CLOSE_DELAY=-1
+        username: sa
+logging:
+    level:
+        org:
+            hibernate: info
