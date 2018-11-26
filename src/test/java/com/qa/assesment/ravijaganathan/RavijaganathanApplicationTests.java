@@ -31,9 +31,9 @@ public class RavijaganathanApplicationTests {
 		RequestSpecification request = RestAssured.given();
 
 		JSONObject requestParams = new JSONObject();
-		requestParams.put("firstName", "Ravi"); // Cast
-		requestParams.put("lastName", "Jaganathan");
-		requestParams.put("accountNumber", "100001");
+		requestParams.put("firstName", "Steven"); // Cast
+		requestParams.put("lastName", "Doe");
+		requestParams.put("accountNumber", "1238");
 
 		request.header("content-type","application/json");
 
