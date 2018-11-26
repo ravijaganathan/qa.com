@@ -26,7 +26,6 @@ public class RavijaganathanApplicationTests {
 	@Test
 	public void Test_createServiceEndPointCheck() throws JSONException {
 
-//		RestAssured.baseURI ="http://localhost:8080/account-project";
 		RequestSpecification request = RestAssured.given();
 
 		JSONObject requestParams = new JSONObject();
@@ -34,16 +33,19 @@ public class RavijaganathanApplicationTests {
 		requestParams.put("lastName", "Jaganathan");
 		requestParams.put("accountNumber", "100001");
 
-//		StringEntity params = new StringEntity(j.toString());
 		request.header("content-type","application/json");
 
 		request.body(requestParams.toString());
 
-		//request.body(requestParams);
 		Response response = request.post("http://localhost:8080/account-project/rest/account/json");
 
 		int statusCode = 200;
 		Assert.assertEquals(statusCode, response.statusCode());
+	}
+
+	@Test
+	public void Test_retriveServiceEndPointCheck(){
+		Assert.fail("No Code implemented for retrival");
 	}
 
 }
